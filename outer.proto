@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package outer;
+
+service User{
+  rpc createUser(UserCreateReq) returns (UserCreateRes) {}
+
+}
+
+message UserCreateReq{
+  string name = 1;
+  string username = 2;
+  string password = 3;
+}
+
+message UserCreateRes{
+  string id = 1;
+  string name = 2;
+  string username = 3;
+  string password = 4;
+}
